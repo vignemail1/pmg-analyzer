@@ -1,0 +1,5 @@
+2026-01-06T12:03:51.151201+02:00 pmg-example postfix/smtpd[300101]: connect from mx-tls.example.net[192.0.2.103]
+2026-01-06T12:03:51.678704+02:00 pmg-example postfix/smtpd[300101]: SSL_accept error from mx-tls.example.net[192.0.2.103]: -1
+2026-01-06T12:03:51.678759+02:00 pmg-example postfix/smtpd[300101]: warning: TLS library problem: error:0A000412:SSL routines::ssl/tls alert bad certificate:../ssl/record/rec_layer_s3.c:918:SSL alert number 42:
+2026-01-06T12:03:51.678856+02:00 pmg-example postfix/smtpd[300101]: NOQUEUE: lost connection after STARTTLS from mx-tls.example.net[192.0.2.103]
+2026-01-06T12:03:51.678884+02:00 pmg-example postfix/smtpd[300101]: disconnect from mx-tls.example.net[192.0.2.103] ehlo=1 starttls=0/1 commands=1/2

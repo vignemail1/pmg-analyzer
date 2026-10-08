@@ -1,0 +1,5 @@
+2026-01-03T21:06:27.179747+02:00 pmg-example postfix/smtpd[100105]: B2C3D4E5F6: client=localhost.localdomain[127.0.0.1], orig_client=mx.example.net[2001:db8::12]
+2026-01-03T21:06:27.181249+02:00 pmg-example postfix/cleanup[100106]: B2C3D4E5F6: message-id=<accepted-001@sender.example.net>
+2026-01-03T21:06:27.226986+02:00 pmg-example postfix/qmgr[100100]: B2C3D4E5F6: from=<sender@example.net>, size=37633, nrcpt=1 (queue active)
+2026-01-03T21:06:27.360102+02:00 pmg-example postfix/smtp[100107]: B2C3D4E5F6: to=<target@example.org>, orig_to=<recipient@example.org>, relay=mailbox.example.org[2001:db8:1::10]:25, delay=0.18, delays=0.05/0/0.07/0.06, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as A200000002)
+2026-01-03T21:06:27.360252+02:00 pmg-example postfix/qmgr[100100]: B2C3D4E5F6: removed

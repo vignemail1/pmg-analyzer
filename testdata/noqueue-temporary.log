@@ -1,0 +1,7 @@
+2026-01-06T11:59:33.212040+02:00 pmg-example postfix/smtpd[300101]: Anonymous TLS connection established from mx-a.example.net[192.0.2.101]: TLSv1.3 with cipher TLS_AES_128_GCM_SHA256 (128/128 bits) key-exchange x25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+2026-01-06T11:59:33.744828+02:00 pmg-example postfix/smtpd[300101]: NOQUEUE: reject: RCPT from mx-a.example.net[192.0.2.101]: 450 4.7.1 <list-owner@example.org>: Recipient address rejected: Service is unavailable (try later); from=<> to=<list-owner@example.org> proto=ESMTP helo=<mx-a.example.net>
+2026-01-06T11:59:33.907590+02:00 pmg-example postfix/smtpd[300101]: disconnect from mx-a.example.net[192.0.2.101] ehlo=2 starttls=1 mail=1 rcpt=0/1 quit=1 commands=5/6
+2026-01-06T11:59:36.648587+02:00 pmg-example postfix/smtpd[300101]: connect from mx-b.example.net[192.0.2.102]
+2026-01-06T11:59:36.705713+02:00 pmg-example postfix/smtpd[300101]: Anonymous TLS connection established from mx-b.example.net[192.0.2.102]: TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits)
+2026-01-06T11:59:36.720706+02:00 pmg-example postfix/smtpd[300101]: NOQUEUE: reject: RCPT from mx-b.example.net[192.0.2.102]: 450 4.7.1 <list-owner@example.org>: Recipient address rejected: Service is unavailable (try later); from=<> to=<list-owner@example.org> proto=ESMTP helo=<helo-b.example.net>
+2026-01-06T11:59:36.727055+02:00 pmg-example postfix/smtpd[300101]: disconnect from mx-b.example.net[192.0.2.102] ehlo=2 starttls=1 mail=1 rcpt=0/1 data=0/1 rset=1 quit=1 commands=6/8

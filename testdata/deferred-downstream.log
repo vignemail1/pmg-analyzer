@@ -1,0 +1,12 @@
+2026-01-06T09:20:18.787851+02:00 pmg-example pmg-smtp-filter[500103]: F400000000000004: new mail message-id=<deferred-001@sender.example.net>
+2026-01-06T09:20:19.654032+02:00 pmg-example pmg-smtp-filter[500103]: F400000000000004: SA score=0/5 time=0.808 bayes=undefined autolearn=disabled hits=DKIM_SIGNED(0.1),DKIM_VALID(-0.1),DKIM_VALID_AU(-0.1),DKIM_VALID_EF(-0.1),DMARC_PASS(-0.1),HTML_MESSAGE(0.001),KAM_LOTSOFHASH(0.25),KAM_TRACKIMAGE(0.2),MAILING_LIST_MULTI(-1),RAND_MKTG_HEADER(1),SPF_HELO_NONE(0.001),SPF_PASS(-0.001)
+2026-01-06T09:20:19.655858+02:00 pmg-example pmg-smtp-filter[500103]: F400000000000004: modified header 'X-SPAM-LEVEL' for <contact@example.org> (rule: Modify Header)
+2026-01-06T09:20:19.657628+02:00 pmg-example postfix/smtpd[500104]: A6B7C8D9E0: client=localhost.localdomain[127.0.0.1], orig_client=mx-d.example.net[192.0.2.106]
+2026-01-06T09:20:19.698762+02:00 pmg-example postfix/cleanup[500105]: A6B7C8D9E0: message-id=<deferred-001@sender.example.net>
+2026-01-06T09:20:19.703325+02:00 pmg-example postfix/qmgr[500100]: A6B7C8D9E0: from=<sender@example.net>, size=18603, nrcpt=1 (queue active)
+2026-01-06T09:20:19.703556+02:00 pmg-example pmg-smtp-filter[500103]: F400000000000004: accept mail to <contact@example.org> (A6B7C8D9E0) (rule: default-accept)
+2026-01-06T09:20:19.707273+02:00 pmg-example pmg-smtp-filter[500103]: F400000000000004: processing time: 0.925 seconds (0.808, 0.052, 0)
+2026-01-06T09:20:19.707589+02:00 pmg-example postfix/lmtp[500106]: B7C8D9E0F1: to=<contact@example.org>, relay=127.0.0.1[127.0.0.1]:10024, delay=1, delays=0.06/0/0.04/0.93, dsn=2.5.0, status=sent (250 2.5.0 OK (F400000000000004))
+2026-01-06T09:20:19.869196+02:00 pmg-example postfix/smtp[500107]: A6B7C8D9E0: host mx2.relay.example.org[192.0.2.107] said: 421 4.7.1 <target-deferred@example.org>: Recipient address rejected: blacklisted domain (in reply to RCPT TO command)
+2026-01-06T09:20:19.921727+02:00 pmg-example postfix/smtp[500107]: A6B7C8D9E0: lost connection with mx2.relay.example.org[192.0.2.107] while sending DATA command
+2026-01-06T09:20:20.093548+02:00 pmg-example postfix/smtp[500107]: A6B7C8D9E0: to=<target-deferred@example.org>, orig_to=<contact@example.org>, relay=mx1.relay.example.org[192.0.2.108]:25, delay=0.44, delays=0.05/0/0.37/0.02, dsn=4.7.1, status=deferred (host mx1.relay.example.org[192.0.2.108] said: 421 4.7.1 <target-deferred@example.org>: Recipient address rejected: blacklisted domain (in reply to RCPT TO command))

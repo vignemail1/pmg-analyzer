@@ -1,0 +1,16 @@
+2026-01-08T11:50:36.678633+02:00 pmg-example postfix/smtpd[400101]: D4E5F6A7B8: client=mx-c.example.net[192.0.2.104]
+2026-01-08T11:50:36.697407+02:00 pmg-example postfix/cleanup[400102]: D4E5F6A7B8: message-id=<downstream-001@sender.example.net>
+2026-01-08T11:50:36.718634+02:00 pmg-example postfix/qmgr[400100]: D4E5F6A7B8: from=<>, size=17129, nrcpt=1 (queue active)
+2026-01-08T11:50:36.797429+02:00 pmg-example pmg-smtp-filter[400103]: F300000000000003: new mail message-id=<downstream-001@sender.example.net>
+2026-01-08T11:50:37.697364+02:00 pmg-example pmg-smtp-filter[400103]: F300000000000003: SA score=4/5 time=0.811 bayes=undefined autolearn=disabled hits=DMARC_QUAR(0.1),HTML_MESSAGE(0.001),KAM_DMARC_QUARANTINE(4),KAM_DMARC_STATUS(0.01),KAM_SHORT(0.001),POISEN_SPAM_PILL(0.1),POISEN_SPAM_PILL_1(0.1),POISEN_SPAM_PILL_3(0.1),SPF_HELO_NONE(0.001)
+2026-01-08T11:50:37.699082+02:00 pmg-example pmg-smtp-filter[400103]: F300000000000003: modified header 'X-SPAM-LEVEL' for <list-owner@example.org> (rule: Modify Header)
+2026-01-08T11:50:37.699237+02:00 pmg-example pmg-smtp-filter[400103]: F300000000000003: modified header 'X-Spam-Status' for <list-owner@example.org> (rule: SPAM Tag Header (Level 3))
+2026-01-08T11:50:37.700934+02:00 pmg-example postfix/smtpd[400104]: E5F6A7B8C9: client=localhost.localdomain[127.0.0.1], orig_client=mx-c.example.net[192.0.2.104]
+2026-01-08T11:50:37.741739+02:00 pmg-example postfix/cleanup[400105]: E5F6A7B8C9: message-id=<downstream-001@sender.example.net>
+2026-01-08T11:50:37.746167+02:00 pmg-example postfix/qmgr[400100]: E5F6A7B8C9: from=<>, size=18070, nrcpt=1 (queue active)
+2026-01-08T11:50:37.746367+02:00 pmg-example pmg-smtp-filter[400103]: F300000000000003: accept mail to <list-owner@example.org> (E5F6A7B8C9) (rule: default-accept)
+2026-01-08T11:50:37.748380+02:00 pmg-example pmg-smtp-filter[400103]: F300000000000003: processing time: 0.978 seconds (0.811, 0.078, 0)
+2026-01-08T11:50:37.748584+02:00 pmg-example postfix/lmtp[400106]: D4E5F6A7B8: to=<list-owner@example.org>, relay=127.0.0.1[127.0.0.1]:10024, delay=1.1, delays=0.07/0/0.05/0.98, dsn=2.5.0, status=sent (250 2.5.0 OK (F300000000000003))
+2026-01-08T11:50:37.748962+02:00 pmg-example postfix/qmgr[400100]: D4E5F6A7B8: removed
+2026-01-08T11:50:37.848749+02:00 pmg-example postfix/smtp[400107]: E5F6A7B8C9: to=<list-owner@example.org>, relay=relay-list.example.org[192.0.2.105]:25, delay=0.15, delays=0.04/0/0.07/0.03, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as A100000001)
+2026-01-08T11:50:37.848907+02:00 pmg-example postfix/qmgr[400100]: E5F6A7B8C9: removed
