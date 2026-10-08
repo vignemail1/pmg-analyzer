@@ -1,0 +1,6 @@
+/pmg-analyzer
+/coverage.out
+*.db
+*.db-shm
+*.db-wal
+.env

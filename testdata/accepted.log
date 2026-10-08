@@ -1,0 +1,10 @@
+2026-01-03T21:06:25.559770+02:00 pmg-example postfix/smtpd[100101]: A1B2C3D4E5: client=mx.example.net[2001:db8::12]
+2026-01-03T21:06:25.560446+02:00 pmg-example postfix/cleanup[100102]: A1B2C3D4E5: message-id=<accepted-001@sender.example.net>
+2026-01-03T21:06:25.564556+02:00 pmg-example postfix/qmgr[100100]: A1B2C3D4E5: from=<sender@example.net>, size=36751, nrcpt=1 (queue active)
+2026-01-03T21:06:25.612299+02:00 pmg-example pmg-smtp-filter[100103]: F100000000000001: new mail message-id=<accepted-001@sender.example.net>
+2026-01-03T21:06:27.176348+02:00 pmg-example pmg-smtp-filter[100103]: F100000000000001: SA score=1/5 time=1.523 bayes=undefined autolearn=disabled hits=DMARC_NONE(0.1),HTML_EXTRA_CLOSE(0.001),HTML_MESSAGE(0.001),KAM_DMARC_NONE(0.25),KAM_DMARC_STATUS(0.01),KAM_LAZY_DOMAIN_SECURITY(1),SPF_HELO_PASS(-0.001),SPF_NONE(0.001)
+2026-01-03T21:06:27.177760+02:00 pmg-example pmg-smtp-filter[100103]: F100000000000001: modified header 'X-SPAM-LEVEL' for <recipient@example.org> (rule: Modify Header)
+2026-01-03T21:06:27.227080+02:00 pmg-example pmg-smtp-filter[100103]: F100000000000001: accept mail to <recipient@example.org> (B2C3D4E5F6) (rule: Whitelist)
+2026-01-03T21:06:27.230172+02:00 pmg-example pmg-smtp-filter[100103]: F100000000000001: processing time: 1.619 seconds (1.523, 0.038, 0)
+2026-01-03T21:06:27.230415+02:00 pmg-example postfix/lmtp[100104]: A1B2C3D4E5: to=<recipient@example.org>, relay=127.0.0.1[127.0.0.1]:10024, delay=1.7, delays=0.01/0/0.04/1.6, dsn=2.5.0, status=sent (250 2.5.0 OK (F100000000000001))
+2026-01-03T21:06:27.230683+02:00 pmg-example postfix/qmgr[100100]: A1B2C3D4E5: removed
